@@ -43,9 +43,8 @@ def main():
                 "error": {"code": -32700, "message": "Parse error"},
                 "id": None,
             }
-        
-        sys.stdout.write(json.dumps(response) + "\\n")
-        sys.stdout.flush()
 
+        
+>
 if __name__ == "__main__":
     main()
