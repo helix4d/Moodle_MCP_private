@@ -98,4 +98,6 @@ The server exposes the public methods of the `MoodleAPI` class. Here is a list o
 - `get_tests_in_course(course_id: int)`
 - `get_attempts_by_users(test_id: int, course_id: int, log=None)`
 - `collect_exams_results(courses: list, log=None)`
+
 - `extract_lectures_and_practices(course_contents: list)`
+

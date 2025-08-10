@@ -43,3 +43,19 @@ def setup_logger(
         logger.addHandler(fh)
 
     return logger
+
+        ch = logging.StreamHandler()
+        ch.setLevel(level)
+        ch.setFormatter(formatter)
+        logger.addHandler(ch)
+
+        # файловый хендлер (директорию создаём при необходимости)
+        logfile = Path(logfile)
+        logfile.parent.mkdir(parents=True, exist_ok=True)
+        fh = logging.FileHandler(logfile, mode=mode, encoding="utf-8")
+        fh.setLevel(level)
+        fh.setFormatter(formatter)
+        logger.addHandler(fh)
+
+    return logger
+
