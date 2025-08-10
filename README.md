@@ -70,4 +70,32 @@ The server will respond on its standard output with a JSON object containing the
 
 ## Available Methods
 
-The server exposes the public methods of the `MoodleAPI` class. Refer to `MoodleAPI.py` for a full list of available methods and their parameters.
+The server exposes the public methods of the `MoodleAPI` class. Here is a list of the available methods and their parameters:
+
+### Cohort Methods
+- `get_cohorts()`
+- `get_cohort(cohort_id: int)`
+- `get_cohort_members(cohort_id: int)`
+- `get_cohort_teachers(cohort_id: int, get_cohort_members)`
+- `update_cohort(cohort_id: int)`
+- `search_cohorts(name: str)`
+- `create_cohort(name: str, idnumber: str, description: str)`
+- `add_cohort_member(cohort_id: int, user_id: int)`
+- `delete_cohort_member(cohort_id: int, user_id: int)`
+
+### Course Methods
+- `get_course_contents(course_id: int)`
+- `get_course_by_id(course_id: int)`
+
+### Enrolment and User Methods
+- `get_user_courses(user_id: int)`
+- `get_teacher_courses(courses: list, user_id: int, get_enrolled_users_of_course)`
+- `get_enrolled_users_of_course(course_id: int)`
+- `get_all_users()`
+- `get_user_by_id(user_id: int)`
+
+### Quiz Methods
+- `get_tests_in_course(course_id: int)`
+- `get_attempts_by_users(test_id: int, course_id: int, log=None)`
+- `collect_exams_results(courses: list, log=None)`
+- `extract_lectures_and_practices(course_contents: list)`
